@@ -19,7 +19,7 @@ This file allows you to override and define new Velocity variables.
 #set($bShowDockbarPortlet	= false)
 #set($show_site_name		= false)
 #set($canSetSmartphoneContent = $permissionChecker.isCompanyAdmin() || $permissionChecker.isCommunityAdmin($getterUtil.getLong($group_id)) )
-
+#set($systemGroupId = $getterUtil.getLong($theme.getSetting("systemGroupId")))
 
 #* ------------------------------ footer -------------------------------- *#
 #set($footerArticleId = $theme.getSetting("footerArticleId"))
