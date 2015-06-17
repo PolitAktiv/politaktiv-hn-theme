@@ -1,0 +1,198 @@
+
+
+@include respond-to(phone){ 
+
+/*
+assumes, that size of adminbar is 
+188x63
+however this differs slightly, depending on the chosen account picture 
+*/
+
+
+/*------ Header--------*/
+
+
+	/*rearrange wrapper*/
+	#wrapper, #heading{
+		position: relative !important;
+	}
+	#heading{
+		bottom: 0px !important;
+	}
+	#wrapper{
+		bottom: 70px !important;
+	}
+	
+	/*set heights to 63px (== height of admin bar)*/
+	#wrapper, #banner, #heading, .site-title, #header-background-image, #header-content-container, .logo{
+		height: 63px;
+	}
+	
+	/*make headerbox float next to logo box*/
+	#site-title {
+		float: left;
+	}
+	
+	/*hide not-used header contents*/
+	.language-container, .static-social-bookmark, .ist-topbar{
+		display:none;
+	}
+	
+	
+
+/*Logobox*/
+
+	.logo{
+		padding: 0px;	
+		text-align: center;
+	}
+	.logo, .aui #heading .site-title{
+		width: 100px;
+	}
+	
+	.aui #heading .site-title img{
+		width: 110px; 
+		padding-top: 6px;
+	}
+	
+	#site-title{
+		padding-right: 12px;
+		padding-left: 12px;
+	}
+	
+	/*Headerbox := breadcrumbs and header content*/
+	
+	.aui #breadcrumbs ul{
+		padding: 0px 0px 0px 0px;
+		max-height: 24px; /*(==63-39)*/
+		white-space: nowrap;  
+	}
+	
+	.aui #banner .header-content{
+		max-height: 39px; /*(==63-24)*/
+		min-width: 100%;
+		white-space: nowrap; 
+		font-size: 1.6em;
+		font-weight: normal;
+		line-height: 40px;
+	}
+	
+	#header-content-container{
+		max-width: inherit;
+		width: 450px; /*empirically fine value*/
+		padding-bottom: 2px;
+	}
+	
+	#header-background-image{
+		width: 100%;
+	}
+		
+	@media (max-width: 600px) { /*empirically fine value --> makes the header-content-container jump into next line when device gets really small*/
+  		#header-content-container {
+    			width:100%
+  		}
+	}
+
+/*------ Content Phone --------*/
+
+/*reset custom layout columns */
+
+	.aui .row-fluid .width5of12left{
+		width: auto; 
+		float: left;
+		margin-right: initial;
+		padding: 2px;
+	}
+	
+	 .aui .row-fluid .width5of12right{
+	 	width: auto;
+	 	float: left;
+	 	padding: 2px;
+	 }
+	
+	.aui .row-fluid .width3of12left{
+		width: auto; 
+		float: left;
+		margin-right: initial;
+		padding: 2px;
+	}
+	
+	.aui .row-fluid .width3of12right{
+		width: auto;
+		float: left;
+		padding: 2px;
+	} 
+	
+	.aui .row-fluid .width4of12left{
+		width: auto; 
+		float: left;
+		margin-right: initial;
+		padding: 2px;
+	}
+	
+	.aui .row-fluid .width4of12right{
+		width: auto;
+		float: left;
+		padding: 2px;
+	}
+
+	.aui .row-fluid .width8of12{
+		margin-left: initial;		
+		width: auto;
+		float: left;
+		padding: 2px;
+    }
+    
+    .aui .row-fluid .smartphone-only-content{
+		padding: 2px;
+    }
+    
+
+
+/*------ Basics Phone --------*/
+
+	.aui body {
+   		 font-size: 12pt;
+   		 padding-left: 0px;
+   		 padding-right: 0px;
+	}
+
+	.aui #wrapper {
+   		padding-left: 1px;
+    	padding-right: 1px;
+	}
+
+	/*hide hudcrumbs*/
+	.aui .lfr-hudcrumbs{
+		display: none;
+	}
+
+	.portlet-column-content.empty {
+    	padding: 0px;
+	}
+	
+	.aui .dockbar{
+		left: -20px;
+	}
+	
+	
+	/* ---------- Smartphone-only content ---------- */
+	
+	#smartphone-content-control, .hide-for-mobile-device {
+		display: none;
+	}
+	
+	#smartphone-only-content-container { 
+		display: block;
+	}
+	
+	/* hide boxes */
+	.aui .row-fluid .width2of12right, .aui .row-fluid .width2of12left{
+		width: 0px;
+		height: 0px;
+		margin: 0px;
+		padding: 0px;
+		display: none;
+	}
+	
+}

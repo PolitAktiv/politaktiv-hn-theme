@@ -1,0 +1,210 @@
+
+
+@include respond-to(tablet){ 
+
+/*------ Header --------*/
+
+
+/*rearrange wrapper*/
+#wrapper, #heading{
+	position: relative !important;
+}
+#heading{
+	bottom: 0px !important;
+}
+#wrapper{
+	bottom: 70px !important;
+}
+
+/*set heights to 63px (== height of admin bar)*/
+#wrapper, #banner, #heading, .site-title, #header-background-image, #header-content-container{ 
+	height: 63px;
+}
+
+/*set widths*/
+#banner, #heading{
+	width: 100%;
+}
+
+/*make headerbox float next to logo box*/
+#site-title {
+	float: left;
+}
+
+/*hide not-used header contents*/
+.language-container, .static-social-bookmark, .ist-topbar{
+	display:none;
+}
+
+
+#banner{
+	padding-bottom: 2px;
+}
+
+/*Logo*/
+
+.logo{
+	padding: 0px;	
+	text-align: center;
+}
+
+.logo, .aui #heading .site-title{
+	width: 100px;
+}
+
+.aui #heading .site-title img{
+	width: 110px;
+	padding-top: 7px;
+}
+
+#site-title{
+	padding-right: 14px;
+	padding-left: 14px;
+}
+
+/*Headerbox: breadcrumbs and header-content*/
+.aui #breadcrumbs ul{
+	padding: 0px 0px 0px 0px;
+	max-height: 24px;
+	white-space: nowrap;
+}
+
+.aui #banner .header-content{
+	max-height: 39px; /*(==63-24)*/
+	white-space: nowrap;
+	font-size: 2em;
+	font-weight: normal;
+	line-height: 40px;
+}
+
+/*-------------- Image-Block -------------
+#image-blocks{
+	width: 100%;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	direction: rtl;
+}
+
+#left-image-block {
+	width: 1%;
+	float: right;
+}
+
+#right-image-block {
+	width: 99%;
+	max-width: 221px;
+	float: right;
+}
+
+#left-image-block img{
+	width: 100% !important;
+	min-width: 771px;
+}
+*/
+
+
+/*------ Content Boxes Tablet --------*/
+		
+	/*Change div order using flexbox
+	add webkit for support reasons */
+
+	/* set containers */
+
+	.flex-container{
+
+		display: -webkit-inline-flex;
+		display: -moz-inline-flex;
+		display: inline-flex;	//use flexbox
+
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		flex-wrap: wrap;	//break when insufficiant space 
+	}
+
+	.aui .row-fluid .width8of12{
+		width: inherit;
+	    float: none;
+		-webkit-order: 1;
+		-moz-order: 1;
+		order: 1;	// first element, thus above
+		margin: 0px;
+		padding: 0px;
+    	}
+	
+	.aui .row-fluid .width2of12right{
+		width: 49%;
+		float: left;
+		margin: 0px;;
+		padding: 2px;
+
+		-webkit-order: 3;
+		-moz-order: 3;
+		order: 3;	// second element, thus below element 1
+	}
+	
+	.aui .row-fluid .width2of12left{
+		width: 49%;
+		float: left;
+		margin: 0px;
+		padding: 2px;
+
+		-webkit-order: 2;
+		-moz-order: 2;
+		order: 2;	// third element
+	}
+
+
+	/* set specified widths and margins */
+
+	 .aui .row-fluid .width5of12right, .aui .row-fluid .width5of12left {
+		width: 61.5%;
+		float: none;
+		margin: 0px;
+		padding: 2px;
+	 }
+	
+	
+	.aui .row-fluid .width3of12right, .aui .row-fluid .width3of12left{
+		width: 36.5%;
+		float: none;
+		margin: 0px;
+		padding: 2px;
+	} 
+	
+	.aui .row-fluid .width4of12left, .aui .row-fluid .width4of12right{
+		width: 49%; 
+		float: none;
+		margin: 0px;
+		padding: 2px;
+	}
+	
+	.aui #wrapper {
+   		padding-left: 1px;
+    	padding-right: 1px;
+	}
+
+
+/*------ Basics Tablet --------*/
+
+	.aui body {
+   		font-size: 12px;
+	}
+	
+	/*empty columns also need space, remove padding*/
+	.portlet-column-content.empty {
+    	padding: 0px;
+	}
+	
+	#smartphone-content-toggle{
+		margin-right: 0px;
+	}
+
+		
+	/* ---------- Footer ---------- */
+	
+	#footer{
+		width: 100%
+	}
+	
+}
