@@ -164,6 +164,7 @@ a.aui pre,
   
 
 /*-------------- Navigaton -----------*/
+
 .aui #navigation{
 
     clear: both;
@@ -181,6 +182,22 @@ a.aui pre,
 .aui #navigation li{
 	line-height: 16px;
 	padding: 1px 4px;
+	margin: 2px 0px;
+}
+
+.aui #navigation li{
+	line-height: 16px;
+	padding: 0px 0px 0px 6px;
+	background-color: #D5001C;
+}
+
+.aui #navigation .navbar-inner li a{
+	background-image: linear-gradient(#118ADE 0px, #118ADE 47%, #1273C7 100%);
+}
+
+/*word break after &, using javascript*/
+.aui #navigation span{
+	white-space: pre;
 }
 
 /* ---------- login styles ---------- */
