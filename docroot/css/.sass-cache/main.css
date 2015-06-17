@@ -3290,18 +3290,6 @@ body:first-of-type .portlet-content:hover .lfr-icon-actions .taglib-text {
   max-width: 1440px;
   padding: 0px 5em 0px; }
 
-/*-------------- IST header -----------*/
-.ist-topbar {
-  position: relative;
-  float: right;
-  height: 20px;
-  font-size: 0.8em;
-  background-color: black;
-  color: white;
-  background-clip: content-box;
-  width: 68%;
-  padding-right: 16%; }
-
 /*place IST header exactly on top of the page*/
 h1[class="site-title"] {
   margin: 0px 0; }
@@ -3341,20 +3329,10 @@ a.aui pre,
   position: relative;
   float: left;
   width: 100%;
-  height: 70px;
-  line-height: 70px;
+  height: 37px;
   font-size: 2em;
   margin: 0px;
   text-align: center;
-  vertical-align: middle; }
-
-.static-social-bookmark {
-  float: right;
-  clear: right;
-  width: 16%;
-  height: 70px;
-  line-height: 70px;
-  text-align: right;
   vertical-align: middle; }
 
 /*-------------- Header-Content Background-Image -------------*/
@@ -3485,8 +3463,10 @@ div[id^="p_p_id_31"] > .portlet-borderless-container {
 
 /* ---------- footer styles ---------- */
 div.politaktiv-theme-footer {
-  border-top: 1px solid #000000;
   text-align: center; }
+
+div.politaktiv-theme-footer table td {
+  padding: 0px; }
 
 div.politaktiv-theme-footer ul {
   display: inline-block;
@@ -3500,7 +3480,7 @@ div.politaktiv-theme-footer ul li {
   color: #000000;
   font-size: 11px;
   font-weight: bold;
-  margin: 5px 15px 5px 15px; }
+  margin: 0px 15px 0px 15px; }
 
 div.politaktiv-theme-footer ul li a {
   text-decoration: none;
@@ -3618,16 +3598,21 @@ div.politaktiv-theme-footer ul li a {
   /*Headerbox: breadcrumbs and header-content*/
   .aui #breadcrumbs ul {
     padding: 0px 0px 0px 0px;
-    max-height: 24px;
+    max-height: 23px;
+    /*(==63-20-20)*/
     white-space: nowrap; }
 
+  div.politaktiv-theme-footer {
+    height: 20px;
+    /*(==63-23-20)*/ }
+
   .aui #banner .header-content {
-    max-height: 39px;
-    /*(==63-24)*/
+    max-height: 20px;
+    /*(==63-23-20)*/
     white-space: nowrap;
     font-size: 2em;
     font-weight: normal;
-    line-height: 40px; }
+    line-height: 20px; }
 
   /*-------------- Image-Block -------------
   #image-blocks{
@@ -3778,18 +3763,22 @@ div.politaktiv-theme-footer ul li a {
   /*Headerbox := breadcrumbs and header content*/
   .aui #breadcrumbs ul {
     padding: 0px 0px 0px 0px;
-    max-height: 24px;
-    /*(==63-39)*/
+    max-height: 23px;
+    /*(==63-20-20)*/
     white-space: nowrap; }
 
+  div.politaktiv-theme-footer {
+    height: 20px;
+    /*(==63-23-20)*/ }
+
   .aui #banner .header-content {
-    max-height: 39px;
-    /*(==63-24)*/
+    max-height: 20px;
+    /*(==63-23-20)*/
     min-width: 100%;
     white-space: nowrap;
     font-size: 1.6em;
     font-weight: normal;
-    line-height: 40px; }
+    line-height: 20px; }
 
   #header-content-container {
     max-width: inherit;
@@ -3797,8 +3786,11 @@ div.politaktiv-theme-footer ul li a {
     /*empirically fine value*/
     padding-bottom: 2px; }
 
-  #header-background-image {
+  div.politaktiv-theme-footer table tbody tr td:nth-child(2) {
     width: 100%; }
+
+  div.politaktiv-theme-footer table tbody tr td:nth-child(1), div.politaktiv-theme-footer table tbody tr td:nth-child(3) {
+    display: none; }
 
   /*-------------- Image-Block -------------
   #image-blocks{
@@ -3907,8 +3899,9 @@ div.politaktiv-theme-footer ul li a {
     display: none; } }
 @media (max-width: 767px) and (max-width: 600px) {
   /*empirically fine value --> makes the header-content-container jump into next line when device gets really small*/
-  #header-content-container {
-    width: 100%; }
+  #header-content-container, div.politaktiv-theme-footer {
+    width: 100%;
+    height: auto; }
 
   #content {
     padding-top: 63px; } }

@@ -65,17 +65,23 @@
 /*Headerbox: breadcrumbs and header-content*/
 .aui #breadcrumbs ul{
 	padding: 0px 0px 0px 0px;
-	max-height: 24px;
+	max-height: 23px; /*(==63-20-20)*/
 	white-space: nowrap;
 }
 
+div.politaktiv-theme-footer{
+	height: 20px; /*(==63-23-20)*/
+} 
+
 .aui #banner .header-content{
-	max-height: 39px; /*(==63-24)*/
+	max-height: 20px; /*(==63-23-20)*/
 	white-space: nowrap;
 	font-size: 2em;
 	font-weight: normal;
-	line-height: 40px;
+	line-height: 20px;
 }
+
+
 
 /*-------------- Image-Block -------------
 #image-blocks{
