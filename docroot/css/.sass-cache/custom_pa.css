@@ -143,7 +143,11 @@ a.aui pre,
   z-index: 1; }
 
 .aui #navigation .navbar-inner {
-  min-height: 28px; }
+  min-height: 28px;
+  background: white;
+  border-bottom: solid;
+  border-color: grey;
+  border-bottom-width: 1px; }
 
 .aui #navigation li {
   line-height: 16px;

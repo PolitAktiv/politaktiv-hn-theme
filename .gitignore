@@ -1,8 +1,8 @@
 *.class
-docroot/css
-docroot/images
-docroot/js
-docroot/templates
+docroot/css/*
+docroot/images/*
+docroot/js/*
+docroot/templates/*
 
 # Package Files #
 *.jar

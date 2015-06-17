@@ -166,7 +166,6 @@ a.aui pre,
 /*-------------- Navigaton -----------*/
 
 .aui #navigation{
-
     clear: both;
     font-size: 1em;
     margin-bottom: 15px;
@@ -177,6 +176,10 @@ a.aui pre,
 
 .aui #navigation .navbar-inner{
 	min-height: 28px;
+	background:white;
+	border-bottom: solid;
+	border-color: grey;
+	border-bottom-width: 1px;
 }
   
 .aui #navigation li{
