@@ -145,26 +145,53 @@ a.aui pre,
 .aui #navigation .navbar-inner {
   min-height: 28px;
   background: white;
-  border-bottom: solid;
-  border-color: grey;
-  border-bottom-width: 1px; }
-
-.aui #navigation li {
-  line-height: 16px;
-  padding: 1px 4px;
-  margin: 2px 0px; }
+  padding-left: 0px;
+  text-transform: uppercase;
+  font-family: "Droid Sans"; }
 
 .aui #navigation li {
   line-height: 16px;
   padding: 0px 0px 0px 6px;
-  background-color: #D5001C; }
+  margin: 2px 0px;
+  background-image: url(../images/_custom/line-helper.png);
+  background-position: 40%; }
 
 .aui #navigation .navbar-inner li a {
-  background-image: linear-gradient(#118ade 0px, #118ade 47%, #1273c7 100%); }
+  background-image: linear-gradient(#118ade 0px, #118ade 47%, #1273c7 100%);
+  font-weight: bold !important;
+  color: #515151;
+  background: white; }
+
+.aui #navigation .nav li.active > a {
+  background-color: white;
+  background-image: none;
+  color: #D5001C; }
 
 /*word break after &, using javascript*/
 .aui #navigation span {
   white-space: pre; }
+
+.aui #navigation .nav .dropdown-menu a {
+  color: #515151; }
+
+.aui #navigation .nav .dropdown-menu {
+  background-color: white; }
+
+.aui #navigation .dropdown-menu .child-item .lfr-nav-item li {
+  line-height: 16px;
+  padding: 0px 0px 0px 6px;
+  margin: 2px 0px;
+  background-image: url(../images/_custom/line-helper.png);
+  background-position: 40%; }
+
+.aui #navigation .dropdown-menu .child-item .lfr-nav-item li a {
+  background-color: #A3A3A3;
+  background-position: 40%; }
+
+.aui #navigation .nav .dropdown-menu a:hover {
+  background-color: white;
+  background-image: none;
+  color: #D5001C; }
 
 /* ---------- login styles ---------- */
 .login-description-article {
