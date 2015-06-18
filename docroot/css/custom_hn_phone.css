@@ -2,26 +2,39 @@
 
 @include respond-to(phone){ 
 
-/*
-assumes, that size of adminbar is 
-188x63
-however this differs slightly, depending on the chosen account picture 
-*/
+/* ++++++++++++++++
+++++++BASICS+++++++
++++++++++++++++++*/
 
+	.aui body {
+   		 font-size: 12pt;
+   		 padding-left: 0px;
+   		 padding-right: 0px;
+	}
 
-/*------ Header--------*/
+    .aui .portlet-boundary{
+    	padding-top: 1px;
+    	padding-bottom: 1px;
+    }
 
-
-	/*rearrange wrapper*/
+	/*rearrange wrapper and header positions*/
 	#wrapper, #heading{
 		position: relative !important;
 	}
 	#heading{
 		bottom: 0px !important;
 	}
-	#wrapper{
+	.aui #wrapper{
 		bottom: 70px !important;
+		padding-left: 1px;
+    	padding-right: 1px;
 	}
+
+
+/* ++++++++++++++++
+++++++HEADER+++++++
++++++++++++++++++*/ 
+
 	
 	/*set heights to 63px (== height of admin bar)*/
 	#wrapper, #banner, #heading, .site-title, #header-background-image, #header-content-container, .logo{
@@ -39,8 +52,7 @@ however this differs slightly, depending on the chosen account picture
 	}
 	
 	
-
-/*Logobox*/
+	/* ---------- Logo ---------- */
 
 	.logo{
 		padding: 0px;	
@@ -60,17 +72,13 @@ however this differs slightly, depending on the chosen account picture
 		padding-left: 14px;
 	}
 	
-	/*Headerbox := breadcrumbs and header content*/
+	/*-------------- Header-Content-----------*/
 	
 	.aui #breadcrumbs ul{
 		padding: 0px 0px 0px 0px;
 		max-height: 23px; /*(==63-20-20)*/
 		white-space: nowrap;  
 	}
-	
-	div.politaktiv-theme-footer{
-		height: 20px; /*(==63-23-20)*/
-	} 
 	
 	.aui #banner .header-content{
 		max-height: 20px; /*(==63-23-20)*/
@@ -87,6 +95,11 @@ however this differs slightly, depending on the chosen account picture
 		padding-bottom: 2px;
 	}
 	
+	/*footer is used in header in this theme*/
+	div.politaktiv-theme-footer{
+		height: 20px; /*(==63-23-20)*/
+	} 
+	
 	div.politaktiv-theme-footer table tbody tr td:nth-child(2){
  		 width: 100%;
 	}
@@ -94,7 +107,8 @@ however this differs slightly, depending on the chosen account picture
 	div.politaktiv-theme-footer table tbody tr td:nth-child(1), div.politaktiv-theme-footer table tbody tr td:nth-child(3){
  		 display:none;
 	}
-		
+	
+	/* Header positioning in vertical smartphone mode */	
 	@media (max-width: 600px) { /*empirically fine value --> makes the header-content-container jump into next line when device gets really small*/
   		#header-content-container, div.politaktiv-theme-footer  {
     		width:100%;
@@ -107,32 +121,37 @@ however this differs slightly, depending on the chosen account picture
 
 
 
-/*-------------- Navigaton -----------*/
+/* ++++++++++++++++
+++++NAVIGATION+++++
++++++++++++++++++*/
   
 
-.aui #navigation .navbar-inner{
-	background:none repeat scroll 0% 0% rgb(85, 85, 85);
-}
+	.aui #navigation .navbar-inner{
+		background:none repeat scroll 0% 0% rgb(85, 85, 85);
+	}
 
-.aui #navigation{
-	position: absolute;
-	width: 99.95%;
-}
-  
-.aui #navigation li{
-	background-image: none;
-}
-
-.aui #navigation .nav .dropdown-menu > .lfr-nav-item{
-	background-image: none;
-	padding-left: 20px;
-}
-  
-
-/*------ Content Phone --------*/
-
-/*reset custom layout columns */
-
+	.aui #navigation{
+		position: absolute;
+		width: 99.95%;
+	}
+	  
+	.aui #navigation li{
+		background-image: none;
+	}
+	
+	.aui #navigation .nav .dropdown-menu > .lfr-nav-item{
+		background-image: none;
+		padding-left: 20px;
+	}
+	  
+	
+/* ++++++++++++++++
++++++++MAIN++++++++
++++++CONTENT+++++++
++++++++++++++++++*/
+	
+	/*reset custom layout columns */
+	
 	.aui .row-fluid .width5of12left{
 		width: auto; 
 		float: left;
@@ -183,44 +202,15 @@ however this differs slightly, depending on the chosen account picture
 		padding: 2px;
     }
     
-    .aui .portlet-boundary{
-    	padding-top: 1px;
-    	padding-bottom: 1px;
-    }
-    
 
 
-/*------ Basics Phone --------*/
-
-	.aui body {
-   		 font-size: 12pt;
-   		 padding-left: 0px;
-   		 padding-right: 0px;
-	}
-
-	.aui #wrapper {
-   		padding-left: 1px;
-    	padding-right: 1px;
-	}
-
-
-	/*empty columns also need space, remove padding*/
-	.portlet-column-content.empty {
-    	padding: 0px;
-	}
+/* ++++++++++++++++
+++SMARTPHONE+++++++
++++++++EXCLUSIVE+++
++++++CONTENT+++++++
++++++++++++++++++*/ 
 	
-	#smartphone-content-toggle{
-		margin-right: 0px;
-	}
-	
-	/*move adminbar so that it does not overflow the content*/
-	.aui .dockbar{
-		left: -20px;
-	}
-	
-	
-	/* ---------- Smartphone-only content ---------- */
-	
+	/* show */
 	#smartphone-exclusive-content-container { 
 		display: block;
 	}
@@ -232,6 +222,26 @@ however this differs slightly, depending on the chosen account picture
 		margin: 0px;
 		padding: 0px;
 		display: none;
+	}
+	
+/* ++++++++++++++++
+++++++OTHER++++++++
++++++++STYLES++++++
++++++++++++++++++*/ 
+	
+	/*empty columns also need space, remove padding*/
+	.portlet-column-content.empty {
+    	padding: 0px;
+	}
+	
+	/*show smarthphone-content-toogle on the very right of page*/
+	#smartphone-content-toggle{
+		margin-right: 0px;
+	}
+	
+	/*move adminbar so that it does not overflow the content*/
+	.aui .dockbar{
+		left: -20px;
 	}
 	
 }

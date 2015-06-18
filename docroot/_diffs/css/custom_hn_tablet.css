@@ -1,117 +1,136 @@
-
-
 @include respond-to(tablet){ 
 
-/*------ Header --------*/
+/* ++++++++++++++++
+++++++BASICS+++++++
++++++++++++++++++*/
+
+	.aui body {
+   		font-size: 12px;
+	}
 
 
-/*rearrange wrapper*/
-#wrapper, #heading{
-	position: relative !important;
-}
-#heading{
-	bottom: 0px !important;
-}
-#wrapper{
-	bottom: 70px !important;
-}
+	/*rearrange wrapper and header positions*/
+	#wrapper, #heading{
+		position: relative !important;
+	}
+	#heading{
+		bottom: 0px !important;
+	}
+	.aui #wrapper{
+		bottom: 70px !important;
+		padding-left: 1px;
+    	padding-right: 1px;
+	}
 
-/*set heights to 63px (== height of admin bar)*/
-#wrapper, #banner, #heading, .site-title, #header-background-image, #header-content-container{ 
-	height: 63px;
-}
+/* ++++++++++++++++
+++++++HEADER+++++++
++++++++++++++++++*/ 
 
-/*set widths*/
-#banner, #heading{
-	width: 100%;
-}
+	/*set heights to 63px (== height of admin bar)*/
+	#wrapper, #banner, #heading, .site-title, #header-background-image, #header-content-container{ 
+		height: 63px;
+	}
 
-/*make headerbox float next to logo box*/
-#site-title {
-	float: left;
-}
+	/*set widths*/
+	#banner, #heading{
+		width: 100%;
+	}
 
-/*hide not-used header contents*/
-.language-container, .static-social-bookmark, .ist-topbar{
-	display:none;
-}
+	#banner{
+		padding-bottom: 2px;
+	}
 
+	/*make headerbox float next to logo box*/
+	#site-title {
+		float: left;
+	}
 
-#banner{
-	padding-bottom: 2px;
-}
-
-/*Logo*/
-
-.logo{
-	padding: 0px;	
-	text-align: center;
-}
-
-.logo, .aui #heading .site-title{
-	width: 100px;
-}
-
-.aui #heading .site-title img{
-	width: 110px;
-	padding-top: 14px;
-}
-
-#site-title{
-	padding-right: 14px;
-	padding-left: 14px;
-}
-
-/*Headerbox: breadcrumbs and header-content*/
-.aui #breadcrumbs ul{
-	padding: 0px 0px 0px 0px;
-	max-height: 23px; /*(==63-20-20)*/
-	white-space: nowrap;
-}
-
-div.politaktiv-theme-footer{
-	height: 20px; /*(==63-23-20)*/
-} 
-
-.aui #banner .header-content{
-	max-height: 20px; /*(==63-23-20)*/
-	white-space: nowrap;
-	font-size: 2em;
-	font-weight: normal;
-	line-height: 20px;
-}
+	/*hide not-used header contents*/
+	.language-container, .static-social-bookmark, .ist-topbar{
+		display:none;
+	}
 
 
-/*-------------- Navigaton -----------*/
+	/* ---------- Logo ---------- */
+
+	.logo{
+		padding: 0px;	
+		text-align: center;
+	}
+
+	.logo, .aui #heading .site-title{
+		width: 100px;
+	}
+
+	.aui #heading .site-title img{
+		width: 110px;
+		padding-top: 14px;
+	}
+
+	#site-title{
+		padding-right: 14px;
+		padding-left: 14px;
+	}
+
+	/*-------------- Header-Content-----------*/
+	.aui #breadcrumbs ul{
+		padding: 0px 0px 0px 0px;
+		max-height: 23px; /*(==63-20-20)*/
+		white-space: nowrap;
+	}
+	
+	.aui #banner .header-content{
+		max-height: 20px; /*(==63-23-20)*/
+		white-space: nowrap;
+		font-size: 2em;
+		font-weight: normal;
+		line-height: 20px;
+	}
+	
+	/*footer is used in header in this theme*/
+	#footer{
+		width: 100%
+	}
+
+	div.politaktiv-theme-footer{
+		height: 20px; /*(==63-23-20)*/
+	} 
+
+
+/* ++++++++++++++++
+++++NAVIGATION+++++
++++++++++++++++++*/ 
+
+	.aui #navigation .navbar-inner{
+		background:none repeat scroll 0% 0% rgb(85, 85, 85);
+	}
+
+
+	.aui #navigation{
+		position: absolute;
+		width: 99.95%;
+	}
   
+	.aui #navigation li{
+		background-image: none;
+	}
+	
+	.aui #navigation .nav .dropdown-menu > .lfr-nav-item{
+		background-image: none;
+		padding-left: 20px;
+	}
+	
+/* ++++++++++++++++
++++++++MAIN++++++++
++++++CONTENT+++++++
++++++++++++++++++*/
 
-.aui #navigation .navbar-inner{
-	background:none repeat scroll 0% 0% rgb(85, 85, 85);
-}
-
-
-.aui #navigation{
-	position: absolute;
-	width: 99.95%;
-}
-  
-.aui #navigation li{
-	background-image: none;
-}
-
-.aui #navigation .nav .dropdown-menu > .lfr-nav-item{
-	background-image: none;
-	padding-left: 20px;
-}
-
-
-
-/*------ Content Boxes Tablet --------*/
+	/*------ Content Boxes Tablet --------*/
 		
 	/*Change div order using flexbox
 	add webkit for support reasons */
 
-	/* set containers */
+	/* set containers and order*/
 
 	.flex-container{
 
@@ -181,32 +200,20 @@ div.politaktiv-theme-footer{
 		padding: 2px;
 	}
 	
-	.aui #wrapper {
-   		padding-left: 1px;
-    	padding-right: 1px;
-	}
 
+/* ++++++++++++++++
+++++++OTHER++++++++
++++++++STYLES++++++
++++++++++++++++++*/ 
 
-/*------ Basics Tablet --------*/
-
-	.aui body {
-   		font-size: 12px;
-	}
 	
 	/*empty columns also need space, remove padding*/
 	.portlet-column-content.empty {
     	padding: 0px;
 	}
 	
+	/*show smarthphone-content-toogle on the very right of page*/
 	#smartphone-content-toggle{
 		margin-right: 0px;
 	}
-
-		
-	/* ---------- Footer ---------- */
-	
-	#footer{
-		width: 100%
-	}
-	
 }

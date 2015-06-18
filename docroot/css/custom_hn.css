@@ -1,4 +1,12 @@
-/*---------------- adjust heading sizes - A2 ----------------*/
+/* ++++++++++++++++
+++++++BASICS+++++++
++++++++++++++++++*/ 
+
+/*---------------- adjust font sizes  ----------------*/
+.aui body{
+	font-size: 12px;
+}
+
 .aui h1{
   font-size: 2em; }
 
@@ -11,24 +19,12 @@
 .aui h4{
   font-size: 1.2em; }
   
-/*-----------------reduce font size--------------------*/
 
-.aui body{
-	font-size: 12px;
-}
-  
 /* -------------- wrapper --------------*/
 .aui #wrapper {
 	max-width: 1440px;
 	padding: 0px 5em 0px;}
 
-
-/*place IST header exactly on top of the page*/
-
-h1[class="site-title"]{
-    margin: 0px 0;
-}
- 
 
 /* ---------- Word Wrapping ---------- */
 /* Avoid breaking words on not allowed breakpoints*/
@@ -52,7 +48,17 @@ a.aui pre,
 	-ms-hyphens: none;
 }
 
-/* ---------- logo ---------- */
+
+/* ++++++++++++++++
+++++++HEADER+++++++
++++++++++++++++++*/ 
+
+/*move header to top of the page*/
+h1[class="site-title"]{
+    margin: 0px 0;
+}
+
+/* ---------- Logo ---------- */
 .logo{
     float:left;
     width: 16%;
@@ -72,42 +78,15 @@ a.aui pre,
   vertical-align: middle;
 }
 
-  
-/*-------------- Header-Content Background-Image -------------*/
-
-
 #header-content-container{
   position: relative;
   float: left;
   width: 68%;
-  height: 96px; /* 70px + 26px */
+  height: 96px;
   margin: 0px;
   vertical-align: middle;
 }
 
-#header-background-image{
-
-  /*set absolute position to make it lay "behind" the other divs in the container*/
-  position: absolute;
-
-  /*fixed height -> avoid picture getting smaller in y-dimension*/
-  height: 96px; 
-  
-  /*variable width -> picture always fits exactly the containter width*/
-  width: 100%;
-
-  /*set opactiy*/
-  opacity: 0.5;
-  filter: alpha(opacity=40); /* For IE8 and earlier */
-
-  /*center the background picture*/
-  display: block;
-  background-repeat: no-repeat;
-  background-position: 50%, 50%;
-	
-}
-  
-/*-------------- Breadcrumbs -----------*/
 .aui #breadcrumbs{
   float: left;
   width: 68%;
@@ -136,7 +115,10 @@ a.aui pre,
 }
   
   
-/*-------------- Image-Block -------------*/
+/* ++++++++++++++++
+++++++IMAGE++++++++
++++++++BlOCK+++++++
++++++++++++++++++*/ 
 #image-blocks{
 	width: 100%;
 	display: inline-block;
@@ -159,11 +141,11 @@ a.aui pre,
 #left-image-block img, #right-image-block img{
 	width: 100% !important;
 }
+ 
 
-
-  
-
-/*-------------- Navigaton -----------*/
+/* ++++++++++++++++
+++++NAVIGATION+++++
++++++++++++++++++*/ 
 
 .aui #navigation{
     clear: both;
@@ -171,8 +153,7 @@ a.aui pre,
     margin-bottom: 15px;
     position: relative;
     z-index: 1;
-}
-  
+}  
 
 .aui #navigation .navbar-inner{
 	min-height: 28px;
@@ -239,73 +220,15 @@ a.aui pre,
 	color: #D5001C;
 }
 
-/* ---------- login styles ---------- */
-.login-description-article{ max-width: 50%; float: right;}
-.login-content{ max-width: 50%; float: left;}
-.login-navigation{ max-width: 100%; clear: both;}
 
-/* ---------- registration styles ---------- */
-.registration-content{ max-width:70%; float:left; }
-.registration-description-article{ max-width:30%; float:right; }
-.registration-navigation{ max-width:100%; clear: both; }
 
-/*-------- carousel styles -----------*/
+/* ++++++++++++++++
++++++++MAIN++++++++
++++++CONTENT+++++++
++++++++++++++++++*/ 
 
-div[id^="p_p_id_31"] > .portlet-borderless-container{
-	padding: 0;
-}
-
-.carousel, .carousel-item{
-	height: initial !important;
-	width: initial !important;
-	background-color: #FFF;
-}
-
-.carousel, .carousel-content, .carousel-item, .carousel-item img{
-	max-width: 100% !important;
-	max-height: inherit !important;
-}
-
-.carousel-content menu{
-	visibility: hidden !important;
-}
-
-/* ---------- footer styles ---------- */
-div.politaktiv-theme-footer{
-  text-align: center;
-}
-
-div.politaktiv-theme-footer table td{
-  padding: 0px;
-}
-
-div.politaktiv-theme-footer ul{
-  display: inline-block;
-  list-style-type: none;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;}
-
-div.politaktiv-theme-footer ul li{
-  float: left;
-  color: #000000;
-  font-size: 11px;
-  font-weight: bold;
-  margin: 0px 15px 0px 15px;}
-
-div.politaktiv-theme-footer ul li a{
-  text-decoration: none;
-  color: #000000;
-  font-size: inherit;
-  font-weight: inherit;}
-
-#footer{
-  text-align: right;}
- 
- 
 /* ---------- Layout Columns ---------- */
 
-/* Set width respectively to container width*/
 .aui .row-fluid .width5of12left{
 	width: 62%; 
 	float: left;
@@ -355,11 +278,15 @@ div.politaktiv-theme-footer ul li a{
 	width: 68%;
 }
 
-/* ---------- Hide smartphone-only content ---------- */
+/* ++++++++++++++++
+++SMARTPHONE+++++++
++++++++EXCLUSIVE+++
++++++CONTENT+++++++
++++++++++++++++++*/ 
+
 #smartphone-exclusive-content-container, #smartphone-help-text {  
 	display: none;
 } 
-
 
 #smartphone-content-toggle{
 	color: white;
@@ -372,3 +299,81 @@ div.politaktiv-theme-footer ul li a{
 	margin-right: 60px;
 	width: 150px;
 }
+
+
+/* ++++++++++++++++
+++++++FOOTER+++++++
++++++++++++++++++*/
+
+#footer{
+  text-align: right;
+}
+
+div.politaktiv-theme-footer{
+  text-align: center;
+}
+
+div.politaktiv-theme-footer table td{
+  padding: 0px;
+}
+
+div.politaktiv-theme-footer ul{
+  display: inline-block;
+  list-style-type: none;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+div.politaktiv-theme-footer ul li{
+  float: left;
+  color: #000000;
+  font-size: 11px;
+  font-weight: bold;
+  margin: 0px 15px 0px 15px;
+}
+
+div.politaktiv-theme-footer ul li a{
+  text-decoration: none;
+  color: #000000;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+
+/* ++++++++++++++++
+++++++OTHER++++++++
++++++++STYLES++++++
++++++++++++++++++*/ 
+
+/* ---------- login styles ---------- */
+.login-description-article{ max-width: 50%; float: right;}
+.login-content{ max-width: 50%; float: left;}
+.login-navigation{ max-width: 100%; clear: both;}
+
+/* ---------- registration styles ---------- */
+.registration-content{ max-width:70%; float:left; }
+.registration-description-article{ max-width:30%; float:right; }
+.registration-navigation{ max-width:100%; clear: both; }
+
+/*-------- carousel styles -----------*/
+
+div[id^="p_p_id_31"] > .portlet-borderless-container{
+	padding: 0;
+}
+
+.carousel, .carousel-item{
+	height: initial !important;
+	width: initial !important;
+	background-color: #FFF;
+}
+
+.carousel, .carousel-content, .carousel-item, .carousel-item img{
+	max-width: 100% !important;
+	max-height: inherit !important;
+}
+
+.carousel-content menu{
+	visibility: hidden !important;
+}
+

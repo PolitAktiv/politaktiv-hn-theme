@@ -3268,7 +3268,13 @@ body:first-of-type .portlet-content:hover .lfr-icon-actions .taglib-text {
   .aui.ie8 .dockbar-split .dockbar .navbar-inner .info-button a {
     margin-top: -2px; }
 
-/*---------------- adjust heading sizes - A2 ----------------*/
+/* ++++++++++++++++
+++++++BASICS+++++++
++++++++++++++++++*/
+/*---------------- adjust font sizes  ----------------*/
+.aui body {
+  font-size: 12px; }
+
 .aui h1 {
   font-size: 2em; }
 
@@ -3281,18 +3287,10 @@ body:first-of-type .portlet-content:hover .lfr-icon-actions .taglib-text {
 .aui h4 {
   font-size: 1.2em; }
 
-/*-----------------reduce font size--------------------*/
-.aui body {
-  font-size: 12px; }
-
 /* -------------- wrapper --------------*/
 .aui #wrapper {
   max-width: 1440px;
   padding: 0px 5em 0px; }
-
-/*place IST header exactly on top of the page*/
-h1[class="site-title"] {
-  margin: 0px 0; }
 
 /* ---------- Word Wrapping ---------- */
 /* Avoid breaking words on not allowed breakpoints*/
@@ -3316,7 +3314,14 @@ a.aui pre,
   -webkit-hyphens: none;
   -ms-hyphens: none; }
 
-/* ---------- logo ---------- */
+/* ++++++++++++++++
+++++++HEADER+++++++
++++++++++++++++++*/
+/*move header to top of the page*/
+h1[class="site-title"] {
+  margin: 0px 0; }
+
+/* ---------- Logo ---------- */
 .logo {
   float: left;
   width: 16%;
@@ -3335,33 +3340,14 @@ a.aui pre,
   text-align: center;
   vertical-align: middle; }
 
-/*-------------- Header-Content Background-Image -------------*/
 #header-content-container {
   position: relative;
   float: left;
   width: 68%;
   height: 96px;
-  /* 70px + 26px */
   margin: 0px;
   vertical-align: middle; }
 
-#header-background-image {
-  /*set absolute position to make it lay "behind" the other divs in the container*/
-  position: absolute;
-  /*fixed height -> avoid picture getting smaller in y-dimension*/
-  height: 96px;
-  /*variable width -> picture always fits exactly the containter width*/
-  width: 100%;
-  /*set opactiy*/
-  opacity: 0.5;
-  filter: alpha(opacity=40);
-  /* For IE8 and earlier */
-  /*center the background picture*/
-  display: block;
-  background-repeat: no-repeat;
-  background-position: 50%, 50%; }
-
-/*-------------- Breadcrumbs -----------*/
 .aui #breadcrumbs {
   float: left;
   width: 68%;
@@ -3384,7 +3370,10 @@ a.aui pre,
   z-index: 1;
   background-color: initial; }
 
-/*-------------- Image-Block -------------*/
+/* ++++++++++++++++
+++++++IMAGE++++++++
++++++++BlOCK+++++++
++++++++++++++++++*/
 #image-blocks {
   width: 100%;
   display: inline-block;
@@ -3404,7 +3393,9 @@ a.aui pre,
 #left-image-block img, #right-image-block img {
   width: 100% !important; }
 
-/*-------------- Navigaton -----------*/
+/* ++++++++++++++++
+++++NAVIGATION+++++
++++++++++++++++++*/
 .aui #navigation {
   clear: both;
   font-size: 1em;
@@ -3467,6 +3458,106 @@ a.aui pre,
   background-image: none;
   color: #D5001C; }
 
+/* ++++++++++++++++
++++++++MAIN++++++++
++++++CONTENT+++++++
++++++++++++++++++*/
+/* ---------- Layout Columns ---------- */
+.aui .row-fluid .width5of12left {
+  width: 62%;
+  float: left;
+  margin-right: 1%; }
+
+.aui .row-fluid .width5of12right {
+  width: 62%;
+  float: right; }
+
+.aui .row-fluid .width3of12left {
+  width: 37%;
+  float: left;
+  margin-right: 1%; }
+
+.aui .row-fluid .width3of12right {
+  width: 37%;
+  float: right; }
+
+.aui .row-fluid .width4of12left {
+  width: 49.5%;
+  float: left;
+  margin-right: 1%; }
+
+.aui .row-fluid .width4of12right {
+  width: 49.5%;
+  float: right; }
+
+.aui .row-fluid .width2of12right {
+  width: 15%;
+  float: right;
+  margin-left: 1%; }
+
+.aui .row-fluid .width2of12left {
+  width: 15%;
+  float: left; }
+
+.aui .row-fluid .width8of12 {
+  margin-left: 1%;
+  width: 68%; }
+
+/* ++++++++++++++++
+++SMARTPHONE+++++++
++++++++EXCLUSIVE+++
++++++CONTENT+++++++
++++++++++++++++++*/
+#smartphone-exclusive-content-container, #smartphone-help-text {
+  display: none; }
+
+#smartphone-content-toggle {
+  color: white;
+  background-image: linear-gradient(#41f68e 0px, #169656 47%, #41f68e 100%);
+  position: fixed;
+  z-index: 325;
+  right: 0px;
+  top: 90%;
+  left: auto;
+  margin-right: 60px;
+  width: 150px; }
+
+/* ++++++++++++++++
+++++++FOOTER+++++++
++++++++++++++++++*/
+#footer {
+  text-align: right; }
+
+div.politaktiv-theme-footer {
+  text-align: center; }
+
+div.politaktiv-theme-footer table td {
+  padding: 0px; }
+
+div.politaktiv-theme-footer ul {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0px;
+  border: 0px;
+  padding: 0px; }
+
+div.politaktiv-theme-footer ul li {
+  float: left;
+  color: #000000;
+  font-size: 11px;
+  font-weight: bold;
+  margin: 0px 15px 0px 15px; }
+
+div.politaktiv-theme-footer ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: inherit;
+  font-weight: inherit; }
+
+/* ++++++++++++++++
+++++++OTHER++++++++
++++++++STYLES++++++
++++++++++++++++++*/
 /* ---------- login styles ---------- */
 .login-description-article {
   max-width: 50%;
@@ -3509,105 +3600,28 @@ div[id^="p_p_id_31"] > .portlet-borderless-container {
 .carousel-content menu {
   visibility: hidden !important; }
 
-/* ---------- footer styles ---------- */
-div.politaktiv-theme-footer {
-  text-align: center; }
-
-div.politaktiv-theme-footer table td {
-  padding: 0px; }
-
-div.politaktiv-theme-footer ul {
-  display: inline-block;
-  list-style-type: none;
-  margin: 0px;
-  border: 0px;
-  padding: 0px; }
-
-div.politaktiv-theme-footer ul li {
-  float: left;
-  color: #000000;
-  font-size: 11px;
-  font-weight: bold;
-  margin: 0px 15px 0px 15px; }
-
-div.politaktiv-theme-footer ul li a {
-  text-decoration: none;
-  color: #000000;
-  font-size: inherit;
-  font-weight: inherit; }
-
-#footer {
-  text-align: right; }
-
-/* ---------- Layout Columns ---------- */
-/* Set width respectively to container width*/
-.aui .row-fluid .width5of12left {
-  width: 62%;
-  float: left;
-  margin-right: 1%; }
-
-.aui .row-fluid .width5of12right {
-  width: 62%;
-  float: right; }
-
-.aui .row-fluid .width3of12left {
-  width: 37%;
-  float: left;
-  margin-right: 1%; }
-
-.aui .row-fluid .width3of12right {
-  width: 37%;
-  float: right; }
-
-.aui .row-fluid .width4of12left {
-  width: 49.5%;
-  float: left;
-  margin-right: 1%; }
-
-.aui .row-fluid .width4of12right {
-  width: 49.5%;
-  float: right; }
-
-.aui .row-fluid .width2of12right {
-  width: 15%;
-  float: right;
-  margin-left: 1%; }
-
-.aui .row-fluid .width2of12left {
-  width: 15%;
-  float: left; }
-
-.aui .row-fluid .width8of12 {
-  margin-left: 1%;
-  width: 68%; }
-
-/* ---------- Hide smartphone-only content ---------- */
-#smartphone-exclusive-content-container, #smartphone-help-text {
-  display: none; }
-
-#smartphone-content-toggle {
-  color: white;
-  background-image: linear-gradient(#41f68e 0px, #169656 47%, #41f68e 100%);
-  position: fixed;
-  z-index: 325;
-  right: 0px;
-  top: 90%;
-  left: auto;
-  margin-right: 60px;
-  width: 150px; }
-
 @media (min-width: 768px) and (max-width: 979px) {
-  /*------ Header --------*/
-  /*rearrange wrapper*/
+  /* ++++++++++++++++
+  ++++++BASICS+++++++
+  +++++++++++++++++*/
+  .aui body {
+    font-size: 12px; }
+
+  /*rearrange wrapper and header positions*/
   #wrapper, #heading {
     position: relative !important; }
 
   #heading {
     bottom: 0px !important; }
 
-  #wrapper {
-    bottom: 70px !important; }
+  .aui #wrapper {
+    bottom: 70px !important;
+    padding-left: 1px;
+    padding-right: 1px; }
 
+  /* ++++++++++++++++
+  ++++++HEADER+++++++
+  +++++++++++++++++*/
   /*set heights to 63px (== height of admin bar)*/
   #wrapper, #banner, #heading, .site-title, #header-background-image, #header-content-container {
     height: 63px; }
@@ -3615,6 +3629,9 @@ div.politaktiv-theme-footer ul li a {
   /*set widths*/
   #banner, #heading {
     width: 100%; }
+
+  #banner {
+    padding-bottom: 2px; }
 
   /*make headerbox float next to logo box*/
   #site-title {
@@ -3624,10 +3641,7 @@ div.politaktiv-theme-footer ul li a {
   .language-container, .static-social-bookmark, .ist-topbar {
     display: none; }
 
-  #banner {
-    padding-bottom: 2px; }
-
-  /*Logo*/
+  /* ---------- Logo ---------- */
   .logo {
     padding: 0px;
     text-align: center; }
@@ -3643,16 +3657,12 @@ div.politaktiv-theme-footer ul li a {
     padding-right: 14px;
     padding-left: 14px; }
 
-  /*Headerbox: breadcrumbs and header-content*/
+  /*-------------- Header-Content-----------*/
   .aui #breadcrumbs ul {
     padding: 0px 0px 0px 0px;
     max-height: 23px;
     /*(==63-20-20)*/
     white-space: nowrap; }
-
-  div.politaktiv-theme-footer {
-    height: 20px;
-    /*(==63-23-20)*/ }
 
   .aui #banner .header-content {
     max-height: 20px;
@@ -3662,7 +3672,17 @@ div.politaktiv-theme-footer ul li a {
     font-weight: normal;
     line-height: 20px; }
 
-  /*-------------- Navigaton -----------*/
+  /*footer is used in header in this theme*/
+  #footer {
+    width: 100%; }
+
+  div.politaktiv-theme-footer {
+    height: 20px;
+    /*(==63-23-20)*/ }
+
+  /* ++++++++++++++++
+  ++++NAVIGATION+++++
+  +++++++++++++++++*/
   .aui #navigation .navbar-inner {
     background: none repeat scroll 0% 0% #555555; }
 
@@ -3677,10 +3697,14 @@ div.politaktiv-theme-footer ul li a {
     background-image: none;
     padding-left: 20px; }
 
+  /* ++++++++++++++++
+  +++++++MAIN++++++++
+  +++++CONTENT+++++++
+  +++++++++++++++++*/
   /*------ Content Boxes Tablet --------*/
   /*Change div order using flexbox
   add webkit for support reasons */
-  /* set containers */
+  /* set containers and order*/
   .flex-container {
     display: -webkit-inline-flex;
     display: -moz-inline-flex;
@@ -3735,41 +3759,45 @@ div.politaktiv-theme-footer ul li a {
     margin: 0px;
     padding: 2px; }
 
-  .aui #wrapper {
-    padding-left: 1px;
-    padding-right: 1px; }
-
-  /*------ Basics Tablet --------*/
-  .aui body {
-    font-size: 12px; }
-
+  /* ++++++++++++++++
+  ++++++OTHER++++++++
+  +++++++STYLES++++++
+  +++++++++++++++++*/
   /*empty columns also need space, remove padding*/
   .portlet-column-content.empty {
     padding: 0px; }
 
+  /*show smarthphone-content-toogle on the very right of page*/
   #smartphone-content-toggle {
-    margin-right: 0px; }
-
-  /* ---------- Footer ---------- */
-  #footer {
-    width: 100%; } }
+    margin-right: 0px; } }
 @media (max-width: 767px) {
-  /*
-  assumes, that size of adminbar is 
-  188x63
-  however this differs slightly, depending on the chosen account picture 
-  */
-  /*------ Header--------*/
-  /*rearrange wrapper*/
+  /* ++++++++++++++++
+  ++++++BASICS+++++++
+  +++++++++++++++++*/
+  .aui body {
+    font-size: 12pt;
+    padding-left: 0px;
+    padding-right: 0px; }
+
+  .aui .portlet-boundary {
+    padding-top: 1px;
+    padding-bottom: 1px; }
+
+  /*rearrange wrapper and header positions*/
   #wrapper, #heading {
     position: relative !important; }
 
   #heading {
     bottom: 0px !important; }
 
-  #wrapper {
-    bottom: 70px !important; }
+  .aui #wrapper {
+    bottom: 70px !important;
+    padding-left: 1px;
+    padding-right: 1px; }
 
+  /* ++++++++++++++++
+  ++++++HEADER+++++++
+  +++++++++++++++++*/
   /*set heights to 63px (== height of admin bar)*/
   #wrapper, #banner, #heading, .site-title, #header-background-image, #header-content-container, .logo {
     height: 63px; }
@@ -3782,7 +3810,7 @@ div.politaktiv-theme-footer ul li a {
   .language-container, .static-social-bookmark, .ist-topbar {
     display: none; }
 
-  /*Logobox*/
+  /* ---------- Logo ---------- */
   .logo {
     padding: 0px;
     text-align: center; }
@@ -3798,16 +3826,12 @@ div.politaktiv-theme-footer ul li a {
     padding-right: 14px;
     padding-left: 14px; }
 
-  /*Headerbox := breadcrumbs and header content*/
+  /*-------------- Header-Content-----------*/
   .aui #breadcrumbs ul {
     padding: 0px 0px 0px 0px;
     max-height: 23px;
     /*(==63-20-20)*/
     white-space: nowrap; }
-
-  div.politaktiv-theme-footer {
-    height: 20px;
-    /*(==63-23-20)*/ }
 
   .aui #banner .header-content {
     max-height: 20px;
@@ -3824,13 +3848,21 @@ div.politaktiv-theme-footer ul li a {
     /*empirically fine value*/
     padding-bottom: 2px; }
 
+  /*footer is used in header in this theme*/
+  div.politaktiv-theme-footer {
+    height: 20px;
+    /*(==63-23-20)*/ }
+
   div.politaktiv-theme-footer table tbody tr td:nth-child(2) {
     width: 100%; }
 
   div.politaktiv-theme-footer table tbody tr td:nth-child(1), div.politaktiv-theme-footer table tbody tr td:nth-child(3) {
     display: none; }
 
-  /*-------------- Navigaton -----------*/
+  /* Header positioning in vertical smartphone mode */
+  /* ++++++++++++++++
+  ++++NAVIGATION+++++
+  +++++++++++++++++*/
   .aui #navigation .navbar-inner {
     background: none repeat scroll 0% 0% #555555; }
 
@@ -3845,7 +3877,10 @@ div.politaktiv-theme-footer ul li a {
     background-image: none;
     padding-left: 20px; }
 
-  /*------ Content Phone --------*/
+  /* ++++++++++++++++
+  +++++++MAIN++++++++
+  +++++CONTENT+++++++
+  +++++++++++++++++*/
   /*reset custom layout columns */
   .aui .row-fluid .width5of12left {
     width: auto;
@@ -3889,32 +3924,12 @@ div.politaktiv-theme-footer ul li a {
   .aui .row-fluid .smartphone-only-content {
     padding: 2px; }
 
-  .aui .portlet-boundary {
-    padding-top: 1px;
-    padding-bottom: 1px; }
-
-  /*------ Basics Phone --------*/
-  .aui body {
-    font-size: 12pt;
-    padding-left: 0px;
-    padding-right: 0px; }
-
-  .aui #wrapper {
-    padding-left: 1px;
-    padding-right: 1px; }
-
-  /*empty columns also need space, remove padding*/
-  .portlet-column-content.empty {
-    padding: 0px; }
-
-  #smartphone-content-toggle {
-    margin-right: 0px; }
-
-  /*move adminbar so that it does not overflow the content*/
-  .aui .dockbar {
-    left: -20px; }
-
-  /* ---------- Smartphone-only content ---------- */
+  /* ++++++++++++++++
+  ++SMARTPHONE+++++++
+  +++++++EXCLUSIVE+++
+  +++++CONTENT+++++++
+  +++++++++++++++++*/
+  /* show */
   #smartphone-exclusive-content-container {
     display: block; }
 
@@ -3924,7 +3939,23 @@ div.politaktiv-theme-footer ul li a {
     height: 0px;
     margin: 0px;
     padding: 0px;
-    display: none; } }
+    display: none; }
+
+  /* ++++++++++++++++
+  ++++++OTHER++++++++
+  +++++++STYLES++++++
+  +++++++++++++++++*/
+  /*empty columns also need space, remove padding*/
+  .portlet-column-content.empty {
+    padding: 0px; }
+
+  /*show smarthphone-content-toogle on the very right of page*/
+  #smartphone-content-toggle {
+    margin-right: 0px; }
+
+  /*move adminbar so that it does not overflow the content*/
+  .aui .dockbar {
+    left: -20px; } }
 @media (max-width: 767px) and (max-width: 600px) {
   /*empirically fine value --> makes the header-content-container jump into next line when device gets really small*/
   #header-content-container, div.politaktiv-theme-footer {
