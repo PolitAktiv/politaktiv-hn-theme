@@ -54,28 +54,56 @@
 
 .aui #heading .site-title img{
 	width: 110px;
-	padding-top: 6px;
+	padding-top: 14px;
 }
 
 #site-title{
-	padding-right: 12px;
-	padding-left: 12px;
+	padding-right: 14px;
+	padding-left: 14px;
 }
 
 /*Headerbox: breadcrumbs and header-content*/
 .aui #breadcrumbs ul{
 	padding: 0px 0px 0px 0px;
-	max-height: 24px;
+	max-height: 23px; /*(==63-20-20)*/
 	white-space: nowrap;
 }
 
+div.politaktiv-theme-footer{
+	height: 20px; /*(==63-23-20)*/
+} 
+
 .aui #banner .header-content{
-	max-height: 39px; /*(==63-24)*/
+	max-height: 20px; /*(==63-23-20)*/
 	white-space: nowrap;
 	font-size: 2em;
 	font-weight: normal;
-	line-height: 40px;
+	line-height: 20px;
 }
+
+
+/*-------------- Navigaton -----------*/
+  
+
+.aui #navigation .navbar-inner{
+	background:none repeat scroll 0% 0% rgb(85, 85, 85);
+}
+
+
+.aui #navigation{
+	position: absolute;
+	width: 99.95%;
+}
+  
+.aui #navigation li{
+	background-image: none;
+}
+
+.aui #navigation .nav .dropdown-menu > .lfr-nav-item{
+	background-image: none;
+	padding-left: 20px;
+}
+
 
 
 /*------ Content Boxes Tablet --------*/
@@ -162,20 +190,19 @@
 /*------ Basics Tablet --------*/
 
 	.aui body {
-   		font-size: 10px;
+   		font-size: 12px;
 	}
+	
+	/*empty columns also need space, remove padding*/
 	.portlet-column-content.empty {
     	padding: 0px;
 	}
-
-	.smartphone-only-content-container, #smartphone-content-control, .hide-for-mobile-device {
-		display: none;
-	}
-		
-	.aui .lfr-hudcrumbs{
-		display: none;
-	}
 	
+	#smartphone-content-toggle{
+		margin-right: 0px;
+	}
+
+		
 	/* ---------- Footer ---------- */
 	
 	#footer{

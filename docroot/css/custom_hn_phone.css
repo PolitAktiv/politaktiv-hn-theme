@@ -52,29 +52,33 @@ however this differs slightly, depending on the chosen account picture
 	
 	.aui #heading .site-title img{
 		width: 110px; 
-		padding-top: 6px;
+		padding-top: 14px;
 	}
 	
 	#site-title{
-		padding-right: 12px;
-		padding-left: 12px;
+		padding-right: 14px;
+		padding-left: 14px;
 	}
 	
 	/*Headerbox := breadcrumbs and header content*/
 	
 	.aui #breadcrumbs ul{
 		padding: 0px 0px 0px 0px;
-		max-height: 24px; /*(==63-39)*/
+		max-height: 23px; /*(==63-20-20)*/
 		white-space: nowrap;  
 	}
 	
+	div.politaktiv-theme-footer{
+		height: 20px; /*(==63-23-20)*/
+	} 
+	
 	.aui #banner .header-content{
-		max-height: 39px; /*(==63-24)*/
+		max-height: 20px; /*(==63-23-20)*/
 		min-width: 100%;
 		white-space: nowrap; 
 		font-size: 1.6em;
 		font-weight: normal;
-		line-height: 40px;
+		line-height: 20px;
 	}
 	
 	#header-content-container{
@@ -83,15 +87,47 @@ however this differs slightly, depending on the chosen account picture
 		padding-bottom: 2px;
 	}
 	
-	#header-background-image{
-		width: 100%;
+	div.politaktiv-theme-footer table tbody tr td:nth-child(2){
+ 		 width: 100%;
+	}
+	
+	div.politaktiv-theme-footer table tbody tr td:nth-child(1), div.politaktiv-theme-footer table tbody tr td:nth-child(3){
+ 		 display:none;
 	}
 		
 	@media (max-width: 600px) { /*empirically fine value --> makes the header-content-container jump into next line when device gets really small*/
-  		#header-content-container {
-    			width:100%
+  		#header-content-container, div.politaktiv-theme-footer  {
+    		width:100%;
+    		height: auto;
+  		}
+  		#content{
+  			padding-top: 63px;
   		}
 	}
+
+
+
+/*-------------- Navigaton -----------*/
+  
+
+.aui #navigation .navbar-inner{
+	background:none repeat scroll 0% 0% rgb(85, 85, 85);
+}
+
+.aui #navigation{
+	position: absolute;
+	width: 99.95%;
+}
+  
+.aui #navigation li{
+	background-image: none;
+}
+
+.aui #navigation .nav .dropdown-menu > .lfr-nav-item{
+	background-image: none;
+	padding-left: 20px;
+}
+  
 
 /*------ Content Phone --------*/
 
@@ -147,6 +183,11 @@ however this differs slightly, depending on the chosen account picture
 		padding: 2px;
     }
     
+    .aui .portlet-boundary{
+    	padding-top: 1px;
+    	padding-bottom: 1px;
+    }
+    
 
 
 /*------ Basics Phone --------*/
@@ -162,15 +203,17 @@ however this differs slightly, depending on the chosen account picture
     	padding-right: 1px;
 	}
 
-	/*hide hudcrumbs*/
-	.aui .lfr-hudcrumbs{
-		display: none;
-	}
 
+	/*empty columns also need space, remove padding*/
 	.portlet-column-content.empty {
     	padding: 0px;
 	}
 	
+	#smartphone-content-toggle{
+		margin-right: 0px;
+	}
+	
+	/*move adminbar so that it does not overflow the content*/
 	.aui .dockbar{
 		left: -20px;
 	}
@@ -178,11 +221,7 @@ however this differs slightly, depending on the chosen account picture
 	
 	/* ---------- Smartphone-only content ---------- */
 	
-	#smartphone-content-control, .hide-for-mobile-device {
-		display: none;
-	}
-	
-	#smartphone-only-content-container { 
+	#smartphone-exclusive-content-container { 
 		display: block;
 	}
 	
