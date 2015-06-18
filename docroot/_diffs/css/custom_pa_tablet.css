@@ -54,7 +54,7 @@
 
 .aui #heading .site-title img{
 	width: 110px;
-	padding-top: 7px;
+	padding-top: 14px;
 }
 
 #site-title{
@@ -82,32 +82,28 @@ div.politaktiv-theme-footer{
 }
 
 
+/*-------------- Navigaton -----------*/
+  
 
-/*-------------- Image-Block -------------
-#image-blocks{
-	width: 100%;
-	display: inline-block;
-	float: left;
-	overflow: hidden;
-	direction: rtl;
+.aui #navigation .navbar-inner{
+	background:none repeat scroll 0% 0% rgb(85, 85, 85);
 }
 
-#left-image-block {
-	width: 1%;
-	float: right;
+
+.aui #navigation{
+	position: absolute;
+	width: 99.95%;
+}
+  
+.aui #navigation li{
+	background-image: none;
 }
 
-#right-image-block {
-	width: 99%;
-	max-width: 221px;
-	float: right;
+.aui #navigation .nav .dropdown-menu > .lfr-nav-item{
+	background-image: none;
+	padding-left: 20px;
 }
 
-#left-image-block img{
-	width: 100% !important;
-	min-width: 771px;
-}
-*/
 
 
 /*------ Content Boxes Tablet --------*/
