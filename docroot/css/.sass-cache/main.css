@@ -3408,7 +3408,8 @@ h1[class="site-title"] {
   background: white;
   padding-left: 0px;
   text-transform: uppercase;
-  font-family: "Droid Sans"; }
+  font-family: "Droid Sans";
+  font-size: 13px; }
 
 .aui #navigation li {
   line-height: 16px;
@@ -3790,7 +3791,7 @@ div[id^="p_p_id_31"] > .portlet-borderless-container {
   #heading {
     bottom: 0px !important; }
 
-  .aui #wrapper {
+  #wrapper {
     bottom: 70px !important;
     padding-left: 1px;
     padding-right: 1px; }
