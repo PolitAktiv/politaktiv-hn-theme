@@ -17,6 +17,17 @@
 .aui h4 {
   font-size: 1.2em; }
 
+@font-face {
+  font-family: "Droid Sans";
+  src: url("fonts/web_fonts/droidsans_regular_macroman/DroidSans-webfont.eot");
+  src: url("fonts/web_fonts/droidsans_regular_macroman/DroidSans-webfont.eot?#iefix") format("embedded-opentype"), local("Droid Sans"), local("DroidSans"), url("fonts/web_fonts/droidsans_regular_macroman/DroidSans-webfont.woff"), url("fonts/web_fonts/droidsans_regular_macroman/DroidSans-webfont.ttf"); }
+
+@font-face {
+  font-family: "Droid Sans";
+  font-weight: bold;
+  src: url("fonts/web_fonts/droidsans_bold_macroman/DroidSans-Bold-webfont.eot");
+  src: url("fonts/web_fonts/droidsans_bold_macroman/DroidSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), local("Droid Sans Bold"), local("DroidSans-Bold"), url("fonts/web_fonts/droidsans_bold_macroman/DroidSans-Bold-webfont.woff"), url("fonts/web_fonts/droidsans_bold_macroman/DroidSans-Bold-webfont.ttf"); }
+
 /* -------------- wrapper --------------*/
 .aui #wrapper {
   max-width: 1440px;
