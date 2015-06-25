@@ -27,7 +27,7 @@ $theme.include($body_top_include)
 		    <div id="site-title"> 
 	
 			<h1 class="site-title">
-				<a id="pa-logo" class="$logo_css_class" href="https://www.heilbronn.de/" title="#language_format ("go-to-x", [$site_name])">
+				<a id="pa-logo" class="$logo_css_class" href="https://www.heilbronn.de/" title="Zur Stadtseite Heilbronn wechseln">
 					<img alt="$logo_description"  src="$images_folder/_custom/logo.png"  />
 	
 					#if ($show_site_name)
