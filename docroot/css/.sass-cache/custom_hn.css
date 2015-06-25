@@ -138,7 +138,7 @@ h1[class="site-title"] {
   background: white;
   padding-left: 0px;
   text-transform: uppercase;
-  font-family: "Droid Sans";
+  font-family: "Droid Sans", sans-serif;
   font-size: 13px; }
 
 .aui #navigation li {
