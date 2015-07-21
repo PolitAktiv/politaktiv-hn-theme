@@ -3834,8 +3834,8 @@ div[id^="p_p_id_31"] > .portlet-borderless-container {
 
   #wrapper {
     bottom: 70px !important;
-    padding-left: 1px;
-    padding-right: 1px; }
+    padding-left: 1px !important;
+    padding-right: 1px !important; }
 
   /* ++++++++++++++++
   ++++++HEADER+++++++
